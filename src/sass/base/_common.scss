@@ -1,0 +1,33 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: $primaryFont;
+  font-size: 17px;
+  color: $primaryColor;
+  background-color: $primaryBg;
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+//
+
+.page {
+  flex: 1 1 auto;
+}
