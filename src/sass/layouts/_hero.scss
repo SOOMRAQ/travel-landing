@@ -91,6 +91,28 @@
   }
 }
 
+.hero__action {
+  position: relative;
+  &::before {
+    content: '';
+    display: none;
+    height: 1px;
+    // width: calc((100vw - 450px) / 2);
+    background-color: $primaryColor;
+    position: absolute;
+    top: 50%;
+    // left: 0;
+    transform: translateX(-100%);
+
+    @include tablet {
+      display: block;
+      width: calc((100vw - 738px) / 2);
+    }
+    @include desktop {
+      width: calc((100vw - 1250px) / 2);
+    }
+  }
+}
 //
 
 .wrapper-counter-hero {

@@ -1,0 +1,25 @@
+.partners {
+  background-color: #b1b1b1;
+}
+.partners__container {
+}
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 44px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+  @include desktop {
+    padding-right: 95px;
+    padding-left: 95px;
+  }
+}
+.partners__item {
+}
