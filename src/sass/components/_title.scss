@@ -1,0 +1,37 @@
+.title {
+  font-size: 37px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+
+  @include tablet {
+    font-size: 50px;
+  }
+
+  &--s34 {
+    font-size: 34px;
+  }
+
+  &--s29 {
+    font-size: 29px;
+
+    @include tablet {
+      font-size: 33px;
+    }
+  }
+
+  &--s26 {
+    font-size: 26px;
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include desktop {
+      font-size: 38px;
+    }
+  }
+
+  & span {
+    color: $accentColor;
+  }
+}

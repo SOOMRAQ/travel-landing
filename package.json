@@ -18,6 +18,7 @@
     "url": "https://github.com/soomraq/travel-landing/issues"
   },
   "dependencies": {
+    "flag-icons": "^6.6.6",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
