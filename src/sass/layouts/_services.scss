@@ -33,7 +33,6 @@
 
 .swiper-wrapper {
   @include tablet {
-    flex-wrap: wrap;
     justify-content: space-between;
 
     width: 100%;
@@ -170,16 +169,15 @@
       line-height: 81px;
     }
   }
+}
+.swiper-pagination {
+  position: static;
+  margin-top: 20px;
+  &-bullet-active {
+    background: #000;
+  }
 
-  .swiper-pagination {
-    position: static;
-    margin-top: 20px;
-    &-bullet-active {
-      background: #000;
-    }
-
-    @include tablet {
-      display: none;
-    }
+  @include tablet {
+    display: none;
   }
 }
