@@ -1,0 +1,149 @@
+.free-packages {
+  background-color: #212121;
+  padding-top: 46px;
+  padding-bottom: 32px;
+  &__container {
+    text-align: center;
+  }
+  &__header {
+  }
+  &__title {
+    margin-bottom: 21px;
+  }
+  &__text {
+    margin-bottom: 48px;
+
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+  }
+  &__list {
+  }
+}
+
+//
+.list-free-packages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 66px;
+
+  @include tablet {
+    row-gap: 31px;
+    column-gap: 20px;
+  }
+
+  @include desktop {
+    gap: 71px;
+  }
+
+  &__item {
+    padding: 20px;
+    background: rgba(254, 245, 245, 0.09);
+    border-radius: 10px;
+    border: 3px solid $accentColor;
+
+    @include tablet {
+      flex-basis: calc((100% - 1 * 20px) / 2);
+    }
+    @include desktop {
+      flex-basis: calc((100% - 2 * 71px) / 3);
+    }
+
+    &:last-child {
+      display: none;
+
+      @media screen and (min-width: 768px) and (max-width: 1280px) {
+        display: block;
+      }
+    }
+  }
+  &__img-container {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__image {
+    border-radius: 9px;
+    transition: transform $primaryTransition;
+
+    .list-free-packages__item:hover & {
+      transform: scale(1.02);
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    //
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+    padding-top: 9px;
+  }
+  &__name {
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #f3f3f3;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 23px;
+  }
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 19px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url('../images/icons/location-tick.svg');
+    }
+  }
+  &__action {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    background-color: #494949;
+  }
+  &__like-counter {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  &__text {
+    margin-bottom: 24px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  &__button {
+    align-self: center;
+    padding: 10px 21px;
+    border: none;
+    cursor: pointer;
+    background-color: $accentColor;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.46;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+  }
+}
