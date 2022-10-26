@@ -17,6 +17,20 @@ var progressBarSwiper = new Swiper('.progressionBarSwiper', {
   },
 });
 
+var videoSwiper = new Swiper('.videoSwiper', {
+  loop: true,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+  speed: 600,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.videoSwiper__swiper-button-next',
+    prevEl: '.videoSwiper__swiper-button-prev',
+  },
+});
+
 /* Swiper
  **************************************************************/
 var swiper = swiper;
@@ -71,3 +85,6 @@ window.addEventListener('load', function () {
 window.addEventListener('resize', function () {
   swiperMode();
 });
+
+//
+// const player = videojs('vid1', {});

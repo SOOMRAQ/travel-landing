@@ -1,0 +1,218 @@
+.get-in-touch {
+  padding-top: 39px;
+  padding-bottom: 39px;
+  background: linear-gradient(to bottom, $accentColor 19%, #212121 0%);
+
+  @include tablet {
+    background: linear-gradient(to bottom, $accentColor 23%, #212121 0%);
+    padding-top: 25px;
+    padding-bottom: 52px;
+  }
+
+  @include desktop {
+    background: linear-gradient(to bottom, $accentColor 42%, #212121 0%);
+    padding-top: 52px;
+    padding-bottom: 0px;
+  }
+
+  &__content {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 32px;
+
+    @include desktop {
+      margin-bottom: 60px;
+      text-align: left;
+    }
+  }
+
+  &__form {
+    margin-bottom: 57px;
+    @include desktop {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+// ---------------------------------
+
+.form-get-in-touch {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  padding: 48px 53px 50px 52px;
+  border-radius: 12px;
+  background-color: #181818;
+
+  @include tablet {
+    background: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(40.5px);
+    border-radius: 9px 9px 0px 0px;
+    padding: 78px 39px 28px 39px;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include desktop {
+    padding-top: 21px;
+    margin-left: 0;
+    // margin-bottom: 0px;
+  }
+
+  &__title {
+    display: none;
+    margin-bottom: -21px;
+
+    @include desktop {
+      display: block;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &__text-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 45px;
+
+    @include tablet {
+      column-gap: 93px;
+    }
+    input {
+      width: 100%;
+
+      @include tablet {
+        width: 41%;
+      }
+    }
+  }
+  &__input {
+    padding: 0px;
+    padding-bottom: 6px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #e6e6e6;
+    transition: border-color $primaryTransition;
+
+    &::placeholder {
+      color: #e6e6e6;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $accentColor;
+    }
+  }
+  &__comment {
+    max-height: 117px;
+    padding: 5px 16px;
+
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #e6e6e6;
+    resize: none;
+
+    transition: border-color $primaryTransition;
+
+    &::placeholder {
+      color: #e6e6e6;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $accentColor;
+    }
+  }
+  &__submit-btn {
+    align-self: center;
+    padding: 10px 21px;
+    min-width: 220px;
+    border: none;
+    cursor: pointer;
+    background-color: $accentColor;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.46;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+  }
+}
+
+// ---------------------------------
+
+.contacts-get-in-touch {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+
+  @include desktop {
+    padding-right: 70px;
+    padding-top: 20px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    font-weight: 400;
+    font-size: 22px;
+
+    @include desktop {
+      margin-bottom: 52px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+  &__link {
+    transition: color $primaryTransition;
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+  &__media-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 19px;
+  }
+  &__media-link {
+    fill: white;
+    transition: fill $primaryTransition;
+    &:hover,
+    &:focus {
+      fill: $accentColor;
+    }
+  }
+  &__media-icon {
+    transition: transform $primaryTransition;
+    .contacts-get-in-touch__media-link:hover &,
+    .contacts-get-in-touch__media-link:focus & {
+      transform: scale(1.1);
+    }
+  }
+}

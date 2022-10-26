@@ -1,0 +1,223 @@
+// .video-js .vjs-tech {
+//   width: 930px;
+//   height: 461px;
+// }
+
+.recommendations {
+  padding-bottom: 100px;
+  background-color: #f5f5f5;
+}
+.recommendations__container {
+}
+.swiper {
+}
+.videoSwiper {
+}
+.videoSwiper__wrapper {
+}
+.swiper-slide {
+}
+.videoSwiper__slide {
+  //   width: 100%;
+}
+.slide-videoSwiper {
+}
+.slide-videoSwiper__wrapper {
+}
+.video-js {
+}
+.vjs-big-play-centered {
+}
+.slide-videoSwiper__description {
+}
+.description-recommendations {
+}
+.description-recommendations__title {
+}
+.description-recommendations__location {
+}
+.description-recommendations__text {
+}
+.description-recommendations__button {
+}
+.swiper-button-next {
+}
+.videoSwiper__swiper-button-next,
+.videoSwiper__swiper-button-prev {
+  &::after {
+    font-size: inherit;
+  }
+
+  top: 100%;
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  background-color: #252525;
+  transition: background-color $primaryTransition;
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    width: 60px;
+    height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
+
+.videoSwiper__swiper-button-next {
+  right: 40%;
+  top: 18px;
+  transform: translateX(100px);
+}
+video {
+  object-fit: fill;
+}
+
+.videoSwiper__swiper-button-prev {
+  left: 60%;
+  top: 18px;
+  //   transform: translateX(-120px);
+}
+.swiper-button-prev {
+}
+.videoSwiper__swiper-button-prev {
+}
+
+.slide-videoSwiper__wrapper {
+  height: 520px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.recommendations__description {
+}
+.description-recommendations {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 400px;
+  padding: 20px;
+  background: #252525;
+  border-radius: 7px;
+}
+.description-recommendations__title {
+  font-weight: 600;
+  font-size: 23px;
+}
+.description-recommendations__location {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 19px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/icons/location-tick.svg');
+  }
+}
+.description-recommendations__text {
+  margin-bottom: 42px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 20px;
+}
+.description-recommendations__button {
+  align-self: center;
+  padding: 10px 21px;
+  border: none;
+  cursor: pointer;
+  background-color: $accentColor;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.46;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+/*----------- Big Play Button -----------*/
+
+#my-video .vjs-big-play-button {
+  border: none;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  top: 48%;
+  margin-left: -0.5em;
+  color: #ccc;
+  background: #262626;
+  font-size: 2.8em;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  transition: background-color $primaryTransition;
+}
+
+#my-video:hover .vjs-big-play-button {
+  background-color: $accentColor;
+}
+
+/*----------------------------------------*/
+
+/*-------------- Control Bar -------------*/
+
+#my-video .vjs-control-bar {
+  background: #262626;
+  color: #ccc;
+  width: 64%;
+  left: 18%;
+  bottom: 4%;
+  font-size: 1.3em;
+}
+
+#my-video .vjs-play-progress,
+#my-video .vjs-volume-level {
+  background: $accentColor;
+}
+
+/*----------- Play/Pause Toggle ----------*/
+
+#my-video .vjs-play-control {
+  right: 102%;
+  background: #262626;
+  border-radius: 10%;
+  position: absolute;
+}
+
+/*----------- Fullscreen Toggle ----------*/
+
+#my-video .vjs-fullscreen-control {
+  left: 102%;
+  background: #262626;
+  position: absolute;
+  border-radius: 10%;
+}
+
+/*---------- Add/Remove Button ----------*/
+
+#my-video .vjs-picture-in-picture-control {
+  display: none;
+}
+
+#my-video .vjs-current-time {
+  display: block;
+}
