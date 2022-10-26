@@ -1,0 +1,122 @@
+<section class="book">
+  <div class="book__container">
+    <h2 class="book__title title">Book a <span>Flight</span> With Us Today</h2>
+
+    <form class="book__form form-book">
+      <div class="form-book__checkboxes">
+        <input
+          type="radio"
+          name="chooseTrip"
+          id="OneWay"
+          class="form-book__checkbox"
+          value="One Way"
+        />
+        <label for="OneWay" class="form-book__label-checkbox">One Way</label>
+
+        <input
+          type="radio"
+          name="chooseTrip"
+          id="RoundTrip"
+          class="form-book__checkbox"
+          value="Round Trip"
+        />
+        <label for="RoundTrip" class="form-book__label-checkbox"
+          >Round Trip</label
+        >
+      </div>
+
+      <div class="form-book__input-area">
+        <input
+          type="text"
+          class="form-book__input"
+          placeholder="Leaving from..."
+        />
+        <svg class="form-book__input-icon" width="24" height="24">
+          <use href="./images/icons/sprite.svg#icon-location"></use>
+        </svg>
+      </div>
+      <div class="form-book__input-area">
+        <input type="text" class="form-book__input" placeholder="Going to..." />
+        <svg class="form-book__input-icon" width="24" height="24">
+          <use href="./images/icons/sprite.svg#icon-location"></use>
+        </svg>
+      </div>
+
+      <div class="form-book__dates">
+        <div class="form-book__input-area">
+          <input
+            type="date"
+            class="form-book__input form-book__input--lpad45"
+            placeholder="Depart"
+          />
+          <svg class="form-book__input-icon" width="24" height="24">
+            <use href="./images/icons/sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <div class="form-book__input-area">
+          <input
+            type="date"
+            class="form-book__input form-book__input--lpad45"
+            placeholder="Return"
+          />
+          <svg class="form-book__input-icon" width="24" height="24">
+            <use href="./images/icons/sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="form-book__options">
+        <div class="form-book__input-area">
+          <select
+            type="text"
+            class="form-book__input"
+            placeholder="2 passengers"
+          >
+            <option value="1 passenger">1 passenger</option>
+            <option value="2 passengers">2 passengers</option>
+          </select>
+          <svg class="form-book__input-icon" width="24" height="24">
+            <use href="./images/icons/sprite.svg#icon-passengers"></use>
+          </svg>
+          <div class="form-book__choices">
+            <svg class="form-book__choices-icon" width="14" height="14">
+              <use href="./images/icons/sprite.svg#icon-arrow-up"></use>
+            </svg>
+            <svg
+              class="form-book__choices-icon form-book__choices-icon--reverse"
+              width="14"
+              height="14"
+            >
+              <use href="./images/icons/sprite.svg#icon-arrow-up"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="form-book__input-area">
+          <select type="text" class="form-book__input" placeholder="1st class">
+            <option value="1st class">1st class</option>
+            <option value="2nd class">2nd class</option>
+          </select>
+          <svg class="form-book__input-icon" width="24" height="24">
+            <use href="./images/icons/sprite.svg#icon-class"></use>
+          </svg>
+          <div class="form-book__choices">
+            <svg class="form-book__choices-icon" width="14" height="14">
+              <use href="./images/icons/sprite.svg#icon-arrow-up"></use>
+            </svg>
+            <svg
+              class="form-book__choices-icon form-book__choices-icon--reverse"
+              width="14"
+              height="14"
+            >
+              <use href="./images/icons/sprite.svg#icon-arrow-up"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="form-book__search-btn">
+        Search Available Flights
+      </button>
+    </form>
+  </div>
+</section>

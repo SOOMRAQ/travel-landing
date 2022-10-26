@@ -1,0 +1,222 @@
+.book {
+  padding-top: 59px;
+  padding-bottom: 69px;
+  background-image: url('../images/backgrounds/book/mobile/book-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include retina {
+    background-image: url('../images/backgrounds/book/mobile/book-bg@2x.jpg');
+  }
+
+  @include tablet {
+    background-image: url('../images/backgrounds/book/tablet/book-bg.jpg');
+
+    @include retina {
+      background-image: url('../images/backgrounds/book/tablet/book-bg@2x.jpg');
+    }
+  }
+
+  @include desktop {
+    padding-top: 79px;
+  }
+  &__title {
+    max-width: 280px;
+    margin-bottom: 63px;
+
+    @include tablet {
+      max-width: 100%;
+      margin-bottom: 72px;
+      text-align: center;
+    }
+  }
+}
+
+//
+
+.form-book {
+  padding: 36px 27px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='2' ry='2' stroke='white' stroke-width='2' stroke-dasharray='21.5' stroke-dashoffset='8' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 2px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet {
+    max-width: 551px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 43px 67px 27px 67px;
+  }
+  &__checkboxes {
+    margin-bottom: 63px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+
+    @include tablet {
+      padding-right: 26px;
+      padding-left: 26px;
+      margin-bottom: 34px;
+    }
+  }
+  &__dates {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include tablet {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+  &__options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include tablet {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+  &__checkbox {
+    border: 3px solid #494747;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+  }
+  &__label-checkbox {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 1px solid $primaryColor;
+
+      border-radius: 50%;
+      padding: 10px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      margin-right: 12px;
+    }
+
+    .form-book__checkbox:checked + &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      width: 6px;
+      height: 14px;
+      border: solid $accentColor;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__input-area {
+    position: relative;
+    width: 100%;
+    margin-bottom: 43px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translate(0, -50%);
+    fill: $primaryColor;
+    transition: fill $primaryTransition, transform $primaryTransition;
+
+    .form-book__input:focus + & {
+      fill: $accentColor;
+      transform: translate(0, -50%) scale(1.1);
+      //   top: 0;
+    }
+  }
+
+  &__choices {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  &__choices-icon {
+    fill: $primaryColor;
+    &--reverse {
+      transform: scale(1, -1);
+    }
+  }
+
+  &__input {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 65px;
+    appearance: none;
+
+    width: 100%;
+    border: 3px solid #494747;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    outline: none;
+    transition: border-color $primaryTransition;
+
+    color: #c6c6c6;
+    cursor: pointer;
+
+    &:focus {
+      border-color: $accentColor;
+    }
+
+    &::placeholder {
+      font-size: 15px;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+
+      color: #c6c6c6;
+    }
+    &--lpad45 {
+      @include tablet {
+        padding-left: 45px;
+      }
+    }
+  }
+  select {
+    @include tablet {
+      padding-left: 45px;
+    }
+  }
+  &__search-btn {
+    align-self: center;
+    padding: 10px 21px;
+    min-width: 220px;
+    border: none;
+    cursor: pointer;
+    background-color: $accentColor;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.46;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+  }
+}
